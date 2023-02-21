@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 3vh 3vw;
+  z-index: 2;
+}
+header h1 a {
+  font: bold 33px/50px "Kalam", cursive;
+  color: #eee;
+}
+header #gnb {
+  display: flex;
+}
+header #gnb li {
+  margin: 0px 20px;
+}
+header #gnb li a {
+  font: 20px/1 "Kalam";
+  color: #eee;
+  letter-spacing: 1px;
+}
+header .sns {
+  display: flex;
+}
+header .sns li {
+  margin: 0px 12px;
+}
+header .sns li a {
+  font-size: 22px;
+  color: #eee;
+}
+header #snb {
+  display: none;
+  color: #eee;
+}
+
+figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+figure video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+figure .text {
+  position: absolute;
+  left: 6vw;
+  top: 31%;
+  transform: translateY(0, -50%);
+}
+figure .text p {
+  font: normal 8vw/1 "Kalam";
+  color: #eee;
+}
+figure .text ul {
+  display: flex;
+  margin-top: 30px;
+}
+figure .text li {
+  margin: 0px 30px;
+}
+figure .text li i {
+  font-size: 20px;
+  color: #eee;
+  margin-right: 10px;
+}
+figure .text li strong {
+  font: 20px/1 "Kalam";
+  color: #eee;
+  letter-spacing: 1px;
+}
+
+footer {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  font: 12px/1 "arial";
+  letter-spacing: 2px;
+  color: #eee;
+  padding: 5vh 0;
+}
+
+@media screen and (max-width: 968px) {
+  header #gnb {
+    display: none;
+  }
+  header .sns {
+    display: none;
+  }
+  header #snb {
+    display: block;
+  }
+  header #snb .sub-menu {
+    position: absolute;
+    right: 5vw;
+    background-color: rgba(141, 145, 162, 0.575);
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 10px 25px;
+    text-align: right;
+    transition: 0.4s;
+  }
+  header #snb .sub-menu.hide {
+    opacity: 0;
+  }
+  header #snb .sub-menu li {
+    padding: 10px 0;
+    font: 16px/1 "Kalam";
+  }
+  header #snb .sub-menu li a i {
+    margin-left: 8px;
+  }
+  header .btn_menu {
+    display: block;
+    font-size: 4vw;
+  }
+  figure .text p {
+    font-size: 15vw;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,186 @@
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+//font-family: 'Kalam', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&display=swap");
+// font-family: "Francois One", sans-serif;
+
+// RESET
+@import "reset";
+
+$font-color: #eee; // COMMON
+body {
+  background-color: black;
+}
+
+// HEADER
+header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 3vh 3vw;
+  z-index: 2;
+
+  h1 a {
+    font: bold 33px/50px "Kalam", cursive;
+    color: $font-color;
+  }
+  #gnb {
+    display: flex;
+    li {
+      margin: 0px 20px;
+      a {
+        font: 20px/1 "Kalam";
+        color: $font-color;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .sns {
+    display: flex;
+    li {
+      margin: 0px 12px;
+      a {
+        font-size: 22px;
+        color: $font-color;
+      }
+    }
+  }
+  //   #snb {
+  //     .sub-menu {
+  //       position: absolute;
+  //       right: 5vw;
+  //       background-color: rgba(141, 145, 162, 0.575);
+  //       border: 1px solid $font-color;
+  //       border-radius: 6px;
+  //       padding: 10px 25px;
+  //       text-align: right;
+  //       transition: 0.4s;
+
+  //         &.hide {
+  //           opacity: 0;
+  //         }
+  //       li {
+  //         padding: 10px 0;
+  //         font: 16px/1 "Kalam";
+
+  //         a i {
+  //           margin-left: 8px;
+  //         }
+  //       }
+  //     }
+  //   }
+  #snb {
+    display: none;
+    color: #eee;
+  }
+}
+
+// VIDEO
+figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .text {
+    position: absolute;
+    left: 6vw;
+    top: 31%;
+    transform: translateY(0, -50%);
+
+    p {
+      font: normal 8vw/1 "Kalam";
+      color: $font-color;
+    }
+    ul {
+      display: flex;
+      margin-top: 30px;
+    }
+    li {
+      margin: 0px 30px;
+      i {
+        font-size: 20px;
+        color: #eee;
+        margin-right: 10px;
+      }
+      strong {
+        font: 20px/1 "Kalam";
+        color: #eee;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+//FOOTER
+footer {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  font: 12px/1 "arial";
+  letter-spacing: 2px;
+  color: #eee;
+  padding: 5vh 0;
+}
+
+//반응형
+@media screen and (max-width: 968px) {
+  header {
+    #gnb {
+      display: none;
+    }
+    .sns {
+      display: none;
+    }
+    #snb {
+      display: block;
+      .sub-menu {
+        position: absolute;
+        right: 5vw;
+        background-color: rgba(141, 145, 162, 0.575);
+        border: 1px solid $font-color;
+        border-radius: 6px;
+        padding: 10px 25px;
+        text-align: right;
+        transition: 0.4s;
+
+        &.hide {
+          opacity: 0;
+        }
+        li {
+          padding: 10px 0;
+          font: 16px/1 "Kalam";
+
+          a i {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+    .btn_menu {
+      display: block;
+      font-size: 4vw;
+    }
+  }
+  figure {
+    .text {
+      p {
+        font-size: 15vw;
+      }
+    }
+  }
+}
